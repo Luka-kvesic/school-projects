@@ -1,5 +1,5 @@
 #author: Luka kvesic
-#date: 04 september 2025
+#date: 05 september 2025
 #description: ask if its raining and windy and give the appropriate response
 raining = input('is it raining: ')
 if (raining == 'yes') or (raining == 'Yes') or (raining == 'YES'):
@@ -10,4 +10,5 @@ if (raining == 'yes') or (raining == 'Yes') or (raining == 'YES'):
         print('bring an umbrella')
 else:
     print('have a good day')
+
         
