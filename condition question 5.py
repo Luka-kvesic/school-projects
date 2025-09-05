@@ -23,4 +23,5 @@ elif (code == '00'):
 elif (code == '01'):
     print('you dont need to bring anything')
     
-# I tried doing it the normal way but i could'nt get it to work so I resorted to this
+
+# first version, correct version in other file
