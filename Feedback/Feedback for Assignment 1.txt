@@ -1,0 +1,20 @@
+Well done on Q1 Q2 Q5 Q6 Q8 Q9
+
+---------------------------
+Q3 and Q4 dont wrap the input in int because ig the user input a decimal number it will give them an error
+
+---------------------------
+Q7 wrapping the bill in int means the user cant enter a bill with a decimal without getting an error
+
+---------------------------
+Activities from book
+Q6 you can use a double * to make an exponent eg 3.14*radius**2
+
+---------------------------
+Q7 wrapping the input in int means the user can enter a decimal score without getting an error
+
+---------------------------
+Q8 use // to get the feet with no remainder and use % to get just the remainder i.e. the inches 
+
+---------------------------
+Well done on Q9 Q10 Q11
