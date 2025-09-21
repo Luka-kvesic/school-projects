@@ -3,10 +3,10 @@
 #description: print the factorial of a non negative integer
 
 number = int(input('what is the number'))
-number1 = 0
-for i in range(number):
+factorial = 1
+for i in range(1, number+1):
     
-    number1 = number - 1
-    factorial = number * number1
-print(factorial)
+    factorial = factorial * i
+print(factorial) 
+
     
