@@ -6,3 +6,4 @@ if (number>=10) and (number<=20):
     print('thank you')
 else:
     print('thats not between 10 and 20')
+

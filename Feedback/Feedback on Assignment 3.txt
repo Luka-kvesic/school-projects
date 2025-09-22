@@ -1,0 +1,7 @@
+Well done on Q1 Q2 Q3 Q5
+
+-------------------------
+Q4 Well done, you’re very close! At the moment, your loop prints each letter of the name the number of times entered. 
+The task wanted the whole name printed that many times instead. Try switching the order of your loops so the program 
+repeats the name, not each letter.ting each letter x amount of times.
+

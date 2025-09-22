@@ -1,0 +1,12 @@
+Please label the files by assignment.
+
+--------------------------
+Well done on Q1 Q2 Q4 Q8
+
+--------------------------
+Q3 Great job, this works well! You don’t actually need to write i + 1 in your loop. If you change your for loop 
+to for i in range(1, number1 + 1):, it will already include all the numbers from 1 up to your input. That way you 
+can just do number = number + i.
+
+--------------------------
+Q6 Q7 missing from folder
