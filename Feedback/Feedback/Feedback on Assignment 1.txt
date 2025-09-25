@@ -1,0 +1,21 @@
+Q1-9 are missing from github.
+
+--------------------------------
+Activity in book
+Q6 you can use a double * for exponents eg 3.14*radius**2
+
+--------------------------------
+Q7 wrapping the inputs in int doesnt allow the user to enter a grade that has a decimal without getting an error.
+
+--------------------------------
+Q8 you first need to multiply the users input by 2.54 (height = input*2.54) and then get the feet by dividing that answer by 12 with no remainder 
+(feet =height//12) and get the left over inches (inches = height%12)
+
+--------------------------------
+Well done on Q9
+
+--------------------------------
+Q10 wrapping the input in int prevents th euser from entering a decimal base or height.
+
+--------------------------------
+Q11 the formulas for simple and compount interest are incorrect.

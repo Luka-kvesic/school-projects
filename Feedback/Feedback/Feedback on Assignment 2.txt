@@ -1,0 +1,9 @@
+Well done on Q1 Q2 Q4 Q5 Q6 Q7 
+
+--------------------------------
+Q3 not uploaded to github
+
+--------------------------------
+Q8 There is no need to wrap the input in int as you could have the if statement be if number == '1'. This will 
+also mean the user could input a word and it wouldnt break the code. The first if statement isnt needed as 
+you could use an else statement so that any other input including a string would result in error mesage.

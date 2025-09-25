@@ -1,0 +1,8 @@
+Well done on Q1 Q2 Q5
+
+--------------------------
+Q3 and Q4 your loop starts at 0, so it effectively goes from 0 to the given number the question asks for a range from 1 
+to the given number, which can be done by using for i in range(1, num+1) instead of adding i + 1 each time.
+
+--------------------------
+Q6 Q7 and Q8 missing from github please upload asap.

@@ -1,0 +1,15 @@
+Please name the files correctly.
+
+----------------------------------
+Well done on Q1 Q2 Q3
+
+----------------------------------
+Assignment 4 Q3 are is in this folder please move it to the correct one.
+
+----------------------------------
+Q4 your outer loop goes through each letter of the name, so each letter is repeated before moving to the next
+to repeat the full name in order, the outer loop should run for the number of repetitions and the inner loop should 
+go through the letters.
+
+----------------------------------
+Q5 not uploaded to github, please upload asap.
