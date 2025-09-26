@@ -4,6 +4,7 @@
 number = 0
 number1 = int(input('give a number: '))
 
-for i in range(number1):
-    number = number + i + 1
+for i in range(1, number1 + 1):
+    number = number + i
 print(number)
+
