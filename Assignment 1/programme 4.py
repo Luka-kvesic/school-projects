@@ -5,9 +5,9 @@
 number1 = input('enter the first number: ')
 number2 = input('enter the second number: ')
 number3 = input('and the last number: ')
-number1 = int(number1)
-number2 = int(number2)
-number3 = int(number3)
+number1 = float(number1)
+number2 = float(number2)
+number3 = float(number3)
 
 addition_total = number1 + number2
 multiplication_total = number3 * addition_total
