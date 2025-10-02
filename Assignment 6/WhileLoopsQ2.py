@@ -1,5 +1,5 @@
 #author: Luka kvesic
-#date: 19 september 2025
+#date: 2 october 2025
 #description: programme that gets grades and average it out and gives a grade too
 amount = 0
 total = 0
@@ -24,3 +24,4 @@ elif average > 60 and average <= 69:
 elif average <= 59:
     print('your grade is: F')
     
+
