@@ -1,5 +1,5 @@
 #author: Luka kvesic
-#date: 19 september 2025
+#date: 2 october 2025
 #description: programme that gets integers and average it out
 amount = 0
 total = 0
@@ -13,3 +13,4 @@ while True:
 
 average = total / amount
 print(average)
+
