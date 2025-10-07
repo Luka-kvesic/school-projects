@@ -32,5 +32,6 @@ for i in range(digits, 0, -1):
 if total == number1:
     print(total,'is an armstrong number')
 else:
-    print(total,'is not an armstrong number')
+    print(number1,'is not an armstrong number')
+
 
