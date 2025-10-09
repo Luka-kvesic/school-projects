@@ -1,6 +1,6 @@
 #author: Luka kvesic
-#date: 7 october 2025
-#description: programme that finds largest number of list of numbers entered through keyboard
+#date: 9 october 2025
+#description: programme that finds the second largest number
 
 amount = int(input('how many numbers do you want to input: '))
 copyNumber = 0
@@ -20,4 +20,5 @@ print('the second largest is: ',secondNumber)
 
     
     
+
     
