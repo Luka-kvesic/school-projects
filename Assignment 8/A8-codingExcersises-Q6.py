@@ -5,9 +5,10 @@ number = int(input('give a number'))
 divisionNumber = int(input('give a number to be the divider'))
 
 for i in range(1, number + 1):
-        if i%divisionNumber == 0 and i%2==:
+        if i%divisionNumber == 0 and i%2== 0:
             print('number', i,'is divisible and even' )
-        elif passedNumber%2 == 1:
+        elif i%divisionNumber == 0 and i%2 == 1:
             print('number', i,'is divisible and odd' )
+            
     
 
