@@ -3,7 +3,7 @@
 #description: programme that reverses a string using a for loop
 newWord = ''
 
-string = input('enter a string')
+string = input('enter a string: ')
 i = len(string)
 while i > 0:
     letter = string[i-1]
@@ -11,4 +11,5 @@ while i > 0:
     newWord += letter
 print(newWord)
     
+
     
