@@ -79,12 +79,11 @@ if byte3:
             fourBits += '0'
         fourBits = fourBits[::-1]
         
-print(fourBits)
-
+utf = 'U+'
 extraStop  = 0
 extraStart = 0
 halfByte = ''
-
+number = 0
 for i in range(4):
     start = 0 + extraStart
     stop  = 4 + extraStop
@@ -92,12 +91,28 @@ for i in range(4):
         halfByte += fourBits[i]
         
     for i in range(4):
-        number += int(halfByte[i])**(3-i)
-    print(number)
-    print(halfByte)
+        number += int(halfByte[i])*((int(halfByte[i])*2)**(3-i))
+    number = str(number)
+    if number == '10':
+        utf += 'A'
+    elif number == '11':
+        utf += 'B'
+    elif number == '12':
+        utf += 'C'
+    elif number == '13':
+        utf += 'D'
+    elif number == '14':
+        utf += 'E'
+    elif number == '15':
+        utf += 'F'
+    else:
+        utf += number
+    number = int(number)
+    number = 0
     halfByte = ''
     extraStart += 4
     extraStop  += 4
+print(utf)
     
             
             
