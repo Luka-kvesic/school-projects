@@ -8,9 +8,18 @@ byte1 = False
 byte2 = False
 byte3 = False
 counting = False
-binary = input('give the UTF 8 value: ')
-
-
+preBinary = input('give the UTF 8 value: ')
+counter = -1
+preBinary += ';'
+binary = ''
+while True:
+    counter += 1
+    if preBinary[counter] == ';':
+        break
+    if preBinary[counter] != ' ':
+        binary += preBinary[counter]
+    
+    
 if binary[0] == '0':
     byte1 = True
 elif binary[0:3] == '110':
