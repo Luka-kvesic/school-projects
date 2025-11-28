@@ -8,7 +8,7 @@ byte1 = False
 byte2 = False
 byte3 = False
 counting = False
-binary = input('give the binary value: ')
+binary = input('give the UTF 8 value: ')
 
 
 if binary[0] == '0':
@@ -116,3 +116,4 @@ print(utf)
     
             
             
+
