@@ -1,5 +1,5 @@
 #author: Luka kvesic
-#date: 15 dec 2025
+#date: 16 dec 2025
 #description: program 1
 
 
@@ -26,11 +26,16 @@ for i in range(len(evenWinCardIndices)):
         evenDigit -= 9
         #--------step 4----------------#
     total += evenDigit
+for i in range(len(oddWinCardIndices)):
+    oddDigit = oddWinCardIndices[i]
+    oddDigit = int(oddDigit) 
+    total += oddDigit
+print(total)
+
 total += int(checkingDigit)
+print(total)
 #----------------step 5----------------#
 if total%10 == 0:
     print('valid')
 else:
     print('invalid')
-    
-    
