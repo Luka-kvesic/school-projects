@@ -49,13 +49,11 @@ while (tries > 0) and (proggrameRun):
             if modulusifier == 0:
                 modulusifier = 100000000000000000000000000
             dateNum += dateCopy % modulusifier // 10**(i-1)
-        print(dateNum)
         twoDigits = cardNum[0:2]
-        print(twoDigits)
         tenthDigit = cardNum[9]
-        print(tenthDigit)
         cvv = (dateNum * int(twoDigits)) - int(tenthDigit)
         finalNumber = cardNum[0:4]+'-'+cardNum[4:8]+'-'+cardNum[8:12]+'-'+cardNum[12:16]
         print('CVV number:', cvv)
         print('Card number:',finalNumber, 'and it is valid')
         proggrameRun = False
+
