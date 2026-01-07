@@ -12,9 +12,11 @@ i = 0
 proggrameRun = True
 cvv = 0
 while (tries > 0) and (proggrameRun):
+                  #---------------Part 1------------------#
     cardNum = input('Welcome to CardCheck. Enter your card number: ') # 7200828282828210
     print(cardNum)
     cardCopy = int(cardNum)
+                  #--------------Part 2 and Part 3-------------------#
     while cardCopy > 10:
         cardCopy = cardCopy // 10
     if cardCopy == 7:
@@ -27,6 +29,7 @@ while (tries > 0) and (proggrameRun):
         tries -= 1
         print('invalid try again')
         continue
+                 #---------------Part 4-----------------------#
     if checkLength:
         if len(cardNum) == 16:
             continueWithCheck = True
@@ -34,6 +37,7 @@ while (tries > 0) and (proggrameRun):
             tries -= 1
             print('invalid try again')
             continue
+                #-----------------Part 5---------------------#
     if continueWithCheck:
         date = input('Enter the card expiry date: ')
         dateCopy = int(date)
@@ -52,8 +56,10 @@ while (tries > 0) and (proggrameRun):
         twoDigits = cardNum[0:2]
         tenthDigit = cardNum[9]
         cvv = (dateNum * int(twoDigits)) - int(tenthDigit)
+                   #--------------Part 7----------------------#
         finalNumber = cardNum[0:4]+'-'+cardNum[4:8]+'-'+cardNum[8:12]+'-'+cardNum[12:16]
         print('CVV number:', cvv)
         print('Card number:',finalNumber, 'and it is valid')
         proggrameRun = False
+
 
