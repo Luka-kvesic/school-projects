@@ -1,5 +1,5 @@
 #author: Luka kvesic
-#date: 6 jan 2026
+#date: 7 jan 2026
 #description: program 1
 
 checkLength = False
@@ -41,3 +41,4 @@ while (tries > 0) and (proggrameRun):
         print('CVV number:', cvv)
         print('Card number:',finalNumber, 'and it is valid')
         proggrameRun = False
+
