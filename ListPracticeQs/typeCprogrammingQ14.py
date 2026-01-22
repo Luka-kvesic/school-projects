@@ -1,22 +1,24 @@
-list1 = [1,2,3,4,4,5,6,7,7,8,9,0]
-
-#WORK IN PROGRESS
-
+list1 = [1,1,1,1,3,2,2,4,2,6,6,7]
 potentialDupes = []
-duplicates = []
-
-for i in range(len(list1)):
-    print(list1,"mm")
-    for i1 in range(len(potentialDupes)):
-        if list1[i] == potentialDupes[i1]:
-            duplicates.append(list1[i])
-            print(duplicates)
-            list1.pop(i)
+dupes = []
+i = 0
+running = True
+while running:
     print(i)
-    print(list1)
+    if i >= len(list1)-1:
+        running = False
+        continue
+    for j in range(len(potentialDupes)):
+        subRunning = True
+        while subRunning:
+            if list1[i] == potentialDupes[j]:
+                dupes.append(list1[i])
+                list1.pop(i)
+            else:
+                subRunning = False
+           
     potentialDupes.append(list1[i])
-    print(potentialDupes)
-
-list1.extend(duplicates)
-print(duplicates)
+    print(list1)
+    i += 1
+list1.extend(dupes)
 print(list1)
