@@ -69,7 +69,7 @@ hangManStages = ['''
 
 possibleWords = ["words","hang","man","guess","correct"]
 
-word = possibleWords[random.randint(0,4)]
+word = random.choice(possibleWords)
 guessStateString = ""
 guess = 0
 tries = 0
@@ -155,4 +155,5 @@ while Playing:
     
     
     
+
 
