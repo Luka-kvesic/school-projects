@@ -1,9 +1,7 @@
 #name       Luka kvesic
 #date       2/9/2026
-#programme  
+#programme  display random numnber 100 to 1 
 
 import random
 
-fruits = ["apple", "banana", "dragonfruit", "pear", "strawberry"]
-
-print(random.choice(fruits))
+print(random.randint(1,100))
