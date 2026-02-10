@@ -1,17 +1,9 @@
 #name       Luka kvesic
 #date       2/9/2026
-#programme  
+#programme  random fruit picker
 
 import random
 
-userChoice = input("guess if i flip heads or tails, spell heads or tails the same way i do or im not playing: ")
+fruits = ["apple", "banana", "dragonfruit", "pear", "strawberry"]
 
-HT = ["heads","tails"]
-
-reality = random.choice(HT)
-print("you guessed", userChoice)
-print(reality,"was thrown!")
-if reality == userChoice:
-    print("you win")
-else:
-    print("you lose")
+print(random.choice(fruits))
