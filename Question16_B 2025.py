@@ -22,7 +22,7 @@ for i in range(len(temperatures)-1):
     totalHeat += temperatures[i]
 for i in range(len(temperatures)):
     totalNewHeat += temperatures[i]
-oldMean = totalHeat / len(temperatures)-1
+oldMean = totalHeat / (len(temperatures)-1)
 newMean = totalNewHeat / len(temperatures)
 if oldMean > newMean:
     print("The mean tempature is decreasing")
