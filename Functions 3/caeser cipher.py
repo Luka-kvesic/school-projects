@@ -1,4 +1,4 @@
-alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
 possibleToDecrypt = False
 
@@ -33,6 +33,11 @@ def decrypt(string, key):
             decryptedMessage += letter
     return decryptedMessage
 string = input("enter a string: ")
+stringy = ""
+for i in range(len(string)):
+    leter = string[i].upper()
+    stringy += leter
+string = stringy
 print("1 is to encrypt 2 is to decrypt")
 encry = 1
 decry = 2
@@ -43,10 +48,11 @@ while True:
     answer = int(input("what would you like to do: "))
     if (answer == decry) and (possibleToDecrypt):
         decyptoid = decrypt(encryptoid, key)
-        print(decyptoid)
+        print(encryptoid,"when decrypted with key",key,"turns to",decyptoid)
     elif ((answer == decry) and not (possibleToDecrypt)):
         print("theres nothing to decrypt")
     elif answer == encry:
         encryptoid = encrypt(string, key)
-        print(encryptoid)
+        print("the word",string,"with key",key,"turns to",encryptoid)
         possibleToDecrypt = True
+
