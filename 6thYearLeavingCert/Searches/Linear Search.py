@@ -1,5 +1,5 @@
 
-def LinearSort(List, x):
+def LinearSearch(List, x):
     if x.isdigit():
         x = int(x)
     index = 0
@@ -18,4 +18,4 @@ itemList = eval(input("enter a list of items: "))
 elementX = input("enter the item to search for: ")
 
 
-print("the index is", LinearSort(itemList, elementX))
+print("the index is", LinearSearch(itemList, elementX))
