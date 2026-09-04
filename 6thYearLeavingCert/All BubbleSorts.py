@@ -4,8 +4,8 @@ def BubbleSortV1(List):
         swapplet1 = 0
         swapplet2 = 1
         for i in range(len(List) - 1):
-            print(i1)
             if List[swapplet1] > List[swapplet2]:
+                
                 swappling = List[swapplet1]
                 List.pop(swapplet1)
                 List.insert(swapplet2, swappling)
@@ -19,9 +19,7 @@ def BubbleSortV2(List):
         
         swapplet1 = 0
         swapplet2 = 1
-        print(efficiencySkip)
         for i in range(len(List) - 1 - efficiencySkip):
-            print(List)
             if List[swapplet1] > List[swapplet2]:
                 swappling = List[swapplet1]
                 List.pop(swapplet1)
@@ -32,16 +30,23 @@ def BubbleSortV2(List):
     return List
 
 def BubbleSortV3(List):
-    for i in range(len(List) - 1):
+    efficiencySkip = 0
+    for i1 in range(len(List) - 1):
+        
         swapplet1 = 0
         swapplet2 = 1
-        for i in range(len(List) - 1):
+        noSwaps = True
+        for i in range(len(List) - 1 - efficiencySkip):
             if List[swapplet1] > List[swapplet2]:
+                noSwaps = False
                 swappling = List[swapplet1]
                 List.pop(swapplet1)
                 List.insert(swapplet2, swappling)
             swapplet1 += 1
             swapplet2 += 1
+        if noSwaps:
+            return List
+        efficiencySkip += 1
     return List
 
 
@@ -55,4 +60,4 @@ List3 = List.copy()
 
 print("sorted list V1: ",BubbleSortV1(List))
 print("sorted list V2: ",BubbleSortV2(List2))
-#print("sorted list V3: ",BubbleSortV3(List))
+print("sorted list V3: ",BubbleSortV3(List3))
