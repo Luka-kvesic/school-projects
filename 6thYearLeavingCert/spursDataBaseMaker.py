@@ -30,12 +30,30 @@ for line in spursFile:
     db_connection.commit()
 
 
-fetchData = '''select name, goals from playersDataBase'''
+fetchData = '''select name, appearances, goals from playersDataBase'''
 cursor.execute(fetchData)
+nameCount = 0
+i = 0
+appearanceAverageTotal = 0
 for row in cursor:
+    i += 1
     
+    if i == 1:
+        currentName = row[0]
     if row[0] != currentName:
-        
+        goalAverage = appearanceAverageTotal / i
+        pastName = currentName
+        print(pastName, "scored on average:", goalAverage, "goals per match")
+        currentName = row[0]
+        i = 0
+        nameCount += 1
+        appearanceAverageTotal = 0
+    else:
+        appearanceAverageTotal += row[2] / row[1]
+goalAverage = appearanceAverageTotal / i
+pastName = currentName
+print(pastName, "scored on average: ", goalAverage, "goals per match")
+    
     
 
 
