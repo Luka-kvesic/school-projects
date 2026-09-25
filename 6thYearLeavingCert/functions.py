@@ -41,7 +41,6 @@ def calculateFrequency(List):
             for i1 in range(len(frequencyTable)):
                 foundOne = False
                 if frequencyTable[i1][0] == List[i]:
-                    print(frequencyTable[i1])
                     frequencyTable[i1][1] += 1
                     foundOne = True
                 else:
