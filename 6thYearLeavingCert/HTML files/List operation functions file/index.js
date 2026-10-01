@@ -105,6 +105,45 @@ function calculateRange() {
     return ([dataInList[0]," to ", dataInList[dataInList.length -1]])
 }
 
+function calculateFrequency(){
+    let dataFromInput = document.getElementById("userDataset_1").value;
+    let dataInList = dataFromInput.split(",");
+    let soonToBeSortedArray = [];
+    for (let item of dataInList){
+        soonToBeSortedArray = soonToBeSortedArray.concat(parseFloat(item));
+    }
+    let sortedArray = [];
+    dataInList.sort(function(a,b){return a-b});
+    let numItems = dataInList.length;
+    let modeList = [] 
+    sortedArray = dataInList
+    let value = sortedArray[0]
+
+    frequencyList = modeList.concat([[value,1]])
+
+    let found = false
+    for  (let index1 = 1; index1 < numItems; index1++){
+        found = false
+        for  (let index2 = 0; index2 < frequencyList.length; index2++){
+            if (frequencyList[index2][0] === sortedArray[index1]){
+                frequencyList[index2][1] += 1
+                
+                found = true
+            }
+        }
+        if (found === false) {
+            frequencyList = frequencyList.concat([[sortedArray[index1],1]])
+        }
+    }
+    let List = ""
+    for (let item of frequencyList){
+        List = List + "[" + String(item) + "]"
+    }
+    return List
+
+
+}
+
 function calculateMeanBtn(){
 
     document.getElementById("meanPlaceholder").innerHTML = calculateMean();
@@ -123,5 +162,10 @@ function calculateModeBtn(){
 function calculateRangeBtn(){
 
     document.getElementById("rangePlaceholder").innerHTML = calculateRange();
+
+}
+function calculateFrequencyBtn(){
+
+    document.getElementById("frequencyPlaceholder").innerHTML = calculateFrequency();
 
 }
