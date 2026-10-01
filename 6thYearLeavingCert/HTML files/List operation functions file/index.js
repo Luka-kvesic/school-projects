@@ -20,24 +20,7 @@ function calculateMedian() {
     for (let item of dataInList){
         soonToBeSortedArray = soonToBeSortedArray.concat(parseFloat(item));
     }
-    let sortedArray = [];
-    let previousSmallestValue = -9999999999999999999999999999999999;
-    let sorting = true
-    while (sorting){
-        smallestValue = 99999999999999999999999999;
-        
-        for (let item of soonToBeSortedArray){
-            if (smallestValue >= item ) {
-                smallestValue = item;
-            }
-        }
-        soonToBeSortedArray.splice(soonToBeSortedArray.indexOf(smallestValue), 1)
-        sortedArray = sortedArray.concat(smallestValue);
-        if (soonToBeSortedArray.length === 0){
-            sorting = false
-        }
-    }
-    dataInList = sortedArray
+    dataInList.sort(function(a,b){return a-b});
 
 
 
@@ -59,24 +42,10 @@ function calculateMode() {
         soonToBeSortedArray = soonToBeSortedArray.concat(parseFloat(item));
     }
     let sortedArray = [];
-    let previousSmallestValue = -9999999999999999999999999999999999;
-    let sorting = true
-    while (sorting){
-        smallestValue = 99999999999999999999999999;
-        
-        for (let item of soonToBeSortedArray){
-            if (smallestValue >= item ) {
-                smallestValue = item;
-            }
-        }
-        soonToBeSortedArray.splice(soonToBeSortedArray.indexOf(smallestValue), 1)
-        sortedArray = sortedArray.concat(smallestValue);
-        if (soonToBeSortedArray.length === 0){
-            sorting = false
-        }
-    }
+    dataInList.sort(function(a,b){return a-b});
     let numItems = dataInList.length;
     let modeList = [] 
+    sortedArray = dataInList
     let value = sortedArray[0]
 
     modeList = modeList.concat([[value,1]])
@@ -111,17 +80,29 @@ function calculateRange() {
     let dataInList = dataFromInput.split(",");
 
     let numItems = dataInList.length;
-    biggestValue = -99999999999999999999999999;
-    smallestValue = 99999999999999999999999999;
+    let soonToBeSortedArray = [];
     for (let item of dataInList){
-        if (biggestValue <= item ) {
-            biggestValue = item;
-        }
-        if (smallestValue >= item ) {
-            smallestValue = item;
-        } 
+        soonToBeSortedArray = soonToBeSortedArray.concat(parseFloat(item));
     }
-    return ([smallestValue," to ", biggestValue])
+    let sortedArray = [];
+    let previousSmallestValue = -9999999999999999999999999999999999;
+    let sorting = true
+    while (sorting){
+        smallestValue = 99999999999999999999999999;
+        
+        for (let item of soonToBeSortedArray){
+            if (smallestValue >= item ) {
+                smallestValue = item;
+            }
+        }
+        soonToBeSortedArray.splice(soonToBeSortedArray.indexOf(smallestValue), 1)
+        sortedArray = sortedArray.concat(smallestValue);
+        if (soonToBeSortedArray.length === 0){
+            sorting = false
+        }
+    }
+    dataInList.sort(function(a,b){return a-b});
+    return ([dataInList[0]," to ", dataInList[dataInList.length -1]])
 }
 
 function calculateMeanBtn(){
