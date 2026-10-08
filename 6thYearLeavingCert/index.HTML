@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+
+    </head>
+    <body>
+        <h2>enter some data</h2>
+
+        <br>
+        <textarea id="userDataset_1" name="userDataset_1" rows="5" cols="32" placeholder="Enter your data here..."></textarea>
+        <br>
+        <button onclick="calculateMeanBtn()">calculate mean</button>
+        <P>Mean of your dataSet: <span id="meanPlaceholder">____________</span></P>
+        <br>
+        <br>
+        <button onclick="calculateMedianBtn()">calculate median</button>
+        <P>Median of your dataSet: <span id="medianPlaceholder">____________</span></P>
+        <br>
+        <br>
+        <button onclick="calculateModeBtn()">calculate mode</button>
+        <P>Mode of your dataSet: <span id="modePlaceholder">____________</span></P>
+        <br>
+        <br>
+        <button onclick="calculateRangeBtn()">calculate range</button>
+        <P>range of your dataSet: <span id="rangePlaceholder">____________</span></P>
+        <br>
+        <br>
+        <button onclick="calculateFrequencyBtn()">calculate frequency</button>
+        <p>where [item, amount]</p>
+        <P>frequency of your dataSet: <span id="frequencyPlaceholder">____________</span></P>
+         
+        <br>
+        <script> let irisData = {{ list1 | tojson}}; </script>
+        <script src="./static/index.js" type="text/javascript"></script>
+      </body>
+      
+
+
+
+</html>
+
