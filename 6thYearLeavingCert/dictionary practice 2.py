@@ -1,5 +1,4 @@
 wordCounter = {}
-print("\"")
 def frequencyWords(sentence):
     evaluatingSentence = True
     i = 0
@@ -14,16 +13,18 @@ def frequencyWords(sentence):
                 if word in wordCounter:
                     wordCounter[word] += 1
                 else:
-                    wordCounter[word] = 1
+                    if word != "":
+                        wordCounter[word] = 1
                 word = ""
             else:
                 
-                if sentence[i] == " " or (sentence[i] == "\""):
+                if sentence[i] in """ ,;!?`().:"-][{}""":
                     evaluatingWord = False
                     if word in wordCounter:
                         wordCounter[word] += 1
                     else:
-                        wordCounter[word] = 1
+                        if word != "":
+                            wordCounter[word] = 1
                     word = ""
                     
                 else:
@@ -33,18 +34,22 @@ def frequencyWords(sentence):
 
 
 
-
-
-
-
-
-
-
+def toptenifier(wordFrequency):
+    
 
 
 
 file = open("book.txt")
 for line in file:
-    
+    line = str(line)
+    line = line.rstrip("\n")
     wordFrequency = frequencyWords(line)
-print(wordFrequency)
+
+
+
+topTen = toptenifier(wordFrequency)
+
+for key, value in wordFrequency.items():
+    print(key, value)
+    
+    
