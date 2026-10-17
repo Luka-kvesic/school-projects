@@ -18,7 +18,7 @@ def frequencyWords(sentence):
                 word = ""
             else:
                 
-                if sentence[i] in """ ,;!?`().:"-][{}""":
+                if sentence[i] in """ ,;!?`().:"-'][{}""":
                     evaluatingWord = False
                     if word in wordCounter:
                         wordCounter[word] += 1
@@ -35,21 +35,35 @@ def frequencyWords(sentence):
 
 
 def toptenifier(wordFrequency):
-    
+    topTen = {}
+    wordFrequencyCopy = wordFrequency.copy()
+    for key, value in wordFrequency.items():
+        highestValue = 0
+        for key2, value2 in wordFrequencyCopy.items():
+            if value2 > highestValue:
+                highestValue = value2
+                highestKey = key2
+        del wordFrequencyCopy[highestKey]
+        topTen[highestKey] = highestValue
+    return topTen
+                
+            
 
 
-
+ 
 file = open("book.txt")
 for line in file:
     line = str(line)
     line = line.rstrip("\n")
     wordFrequency = frequencyWords(line)
 
-
+i = 0
 
 topTen = toptenifier(wordFrequency)
-
-for key, value in wordFrequency.items():
+for key, value in topTen.items():
+    i += 1
     print(key, value)
+    if i == 10:
+        break
     
     
