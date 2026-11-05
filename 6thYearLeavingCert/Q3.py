@@ -1,21 +1,17 @@
 # Q3
 
-def digitSumify(number, operation):
-    print(number)
+def digitSumify(number):
     if number == "":
-        return 0, "string"
+        return "0"
     else:
         if int(number) < 0:
-            return 0 , "string"
+            return "0"
         else:
-            if operation == "number":
-                return int(number[0]) + digitSumify(number[1:], "number"), "string"
-            elif operation == "string":
-                return number[0] + digitSumify(number[1:], "string"), "string"
+            return str(int(number[0]) + int(digitSumify(number[1:])))
         
 
 number = input("enter a number: ")
 
-digitSum, forget = digitSumify(number, "number")
+digitSum = digitSumify(number)
 
 print(digitSum)
