@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <form action="{{ url_for('FormTaker')}}" method="post">
+        <p>enter your name:</p>
+        <input placeholder="name" name="name" type="text">
+        <br>
+        <p>enter your email:</p>
+        <input placeholder="email" name="email" type="text">
+        <br>
+        <p>enter your age:</p>
+        <input placeholder="age" name="age" type="number">
+        <br>
+        <p>select which ever best describes your experience</p>
+        <select name="experience" id="experience">
+            <option value="good">good</option>
+            <option value="amazing">amazing</option>
+            <option value="best ever">best ever</option>
+        </select>
+        <p>would you recommend this service to a friend</p>
+        <input name="recommend" id="recommnd1" type="radio"  value="Definitely" >  <p>Definitely</p>
+        <br>
+        <input name="recommend" id="recommnd2" type="radio"  value="Maybe" >  <p>Maybe</p>
+        <br>
+        <input name="recommend" id="recommnd3" type="radio"  value="Not sure" > <p>Not sure</p>
+        <br>
+        <p>any extra comments?</p>
+        <textarea placeholder="any comments" name="comment" id="comments"></textarea>
+        <input type="submit" id="submit">
+        </form>
+    </body>
+</html>
