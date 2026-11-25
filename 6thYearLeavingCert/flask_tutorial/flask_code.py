@@ -13,8 +13,6 @@ def about_page():
 def forms_test():
     return render_template("forms_test.html")
 
-DB_connection = sqlite3.connect("database.db")
-cursor = DB_connection.cursor()
 
 addData = """
 insert into users (name, sex, country, message, newsletter) values (?,?,?,?,?)
@@ -24,6 +22,8 @@ insert into users (name, sex, country, message, newsletter) values (?,?,?,?,?)
 def receive_form_data():
     data = request.form
     data = dict(data)
+    DB_connection = sqlite3.connect("database.db")
+    cursor = DB_connection.cursor()
     cursor.execute(addData, (data["name"], data["sex"],data["country"],data["message"],data["newsletter"]))
     print(dict(data))
     return "Apple"
