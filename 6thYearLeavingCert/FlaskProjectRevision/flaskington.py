@@ -12,6 +12,10 @@ def homePage():
 def surveyPage():
     return render_template("index.html")
 
+@app.route("/results")
+def resultsPage():
+    return render_template("results.html")
+
 addData = """insert into form (name, email, age, experience, recommend, comment) values (?,?,?,?,?,?)"""
 
 
@@ -23,5 +27,6 @@ def FormTaker():
     cursor = db_connection.cursor()
     cursor.execute(addData, (data["name"], data["email"], data["age"], data["experience"], data["recommend"], data["comment"], ))
     db_connection.commit()
-    return "yabuka"
+    return render_template("results.html")
     
+
